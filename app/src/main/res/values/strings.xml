@@ -1,6 +1,21 @@
 <resources>
-    <string name="app_name">Team Mates</string>
+    <string name="app_name">My Application</string>
+    <string name="team_mates">Team Mates</string>
+    <string name="enter_your_id">Enter Your ID</string>
+    <string name="next">NEXT</string>
+    <string name="sign_up">SIGN UP</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="enter_your_password">Enter Your Password</string>
+    <string name="sign_in">SIGN IN</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="signn_up">SIGN UP</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
 </resources>
