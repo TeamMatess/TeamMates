@@ -16,9 +16,7 @@ import com.wael.android.teammates.sign.ViewModels.SignUpViewModel
 import com.wael.android.teammates.sign.data.User
 import kotlinx.android.synthetic.main.fragment_login.*
 
-/**
- * A simple [Fragment] subclass.
- */
+
 class Login : Fragment() {
     private lateinit var viewModel: LoginViewModel
     override fun onCreateView(
