@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="team_mates">Team Mates</string>
-    <string name="enter_your_id">Enter Your ID</string>
+    <string name="enter_your_id">Enter Your EMAIL</string>
     <string name="next">NEXT</string>
     <string name="sign_up">SIGN UP</string>
 

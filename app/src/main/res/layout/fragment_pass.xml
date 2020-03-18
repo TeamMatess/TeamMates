@@ -71,7 +71,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/signup_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sign_up"
@@ -85,7 +85,7 @@
         app:layout_constraintTop_toBottomOf="@+id/button"
         app:layout_constraintVertical_bias="0.274" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
 
         android:layout_width="69dp"
         android:layout_height="56dp"
@@ -97,16 +97,16 @@
         app:layout_constraintVertical_bias="0.178">
 
 
-    </de.hdodenhof.circleimageview.CircleImageView>
+    </ImageView>
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <ImageView
 
         android:layout_width="28dp"
         android:layout_height="30dp"
         android:layout_marginBottom="76dp"
         android:src="@drawable/back"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/signup_text"
         app:layout_constraintHorizontal_bias="0.355"
         app:layout_constraintStart_toStartOf="parent"/>
 

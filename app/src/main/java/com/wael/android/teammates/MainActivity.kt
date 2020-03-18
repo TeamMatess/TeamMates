@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.fragment_sign_up.*
 
 class MainActivity : AppCompatActivity() {
-private val login=Login()
+//private val login=Login()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,5 +29,6 @@ private val login=Login()
         val member = Member(user,"room id ","team id ")
         Log.i("user as member ",member.name.toString())
     }
+
 
 }

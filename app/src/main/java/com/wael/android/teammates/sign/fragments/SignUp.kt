@@ -6,13 +6,17 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.wael.android.teammates.R
+import com.wael.android.teammates.databinding.FragmentSignUpBinding
 import com.wael.android.teammates.sign.ViewModels.SignUpViewModel
 import com.wael.android.teammates.sign.data.User
+import kotlinx.android.synthetic.main.fragment_login.*
 import kotlinx.android.synthetic.main.fragment_sign_up.*
 
 
@@ -20,7 +24,8 @@ import kotlinx.android.synthetic.main.fragment_sign_up.*
  * A simple [Fragment] subclass.
  */
 class SignUp : Fragment() {
-
+lateinit var binding:FragmentSignUpBinding
+    lateinit var user: User
     private lateinit var viewModel: SignUpViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -28,26 +33,36 @@ class SignUp : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         viewModel = ViewModelProvider(this).get(SignUpViewModel::class.java)
+        binding=DataBindingUtil.inflate(inflater,R.layout.fragment_sign_up,container,false)
+        // da ele ha7ot feh el value ele gaya mn el layout
 
+        //da el user ele fl fragment layout
+        //binding.user=user
+
+        user.email=binding.user.email
+        user.password=binding.user.password
         //   viewModel=ViewModelProvider(this).get(SignUpViewModel::class.java)
 
-        return inflater.inflate(R.layout.fragment_sign_up, container, false)
+      //
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val user = User()
+       /* val user = User()
         user.email = "ahmedamerr@gmail.com"
         user.name = "assas"
         user.password = "123456789"
-        user.phoneNumber = "01127251927"
+        user.phoneNumber = "01127251927"*/
         button_register.setOnClickListener {
 
             viewModel.signUpResult.observe(viewLifecycleOwner, Observer {
                 if (it == null) {
                     Log.i("check yasta", "tam ya 3am")
+                    button_register.setOnClickListener { findNavController().navigate(R.id.action_signUp_to_home2) }
                     viewModel.AddUser(user)
                 } else {
+                    button_register.setOnClickListener { findNavController().navigate(R.id.action_signUp_to_home2) }
                     Log.i("check yasta", "3awed mara okhra")
 
                 }
@@ -62,10 +77,17 @@ class SignUp : Fragment() {
             })
 
 
-            viewModel.signUp(user.email.toString(), user.password.toString())
+
 //            viewModel.AddUser(user)
+            //check 3al views of fragment fun 1
+            // law el views kamla
+                // signup from viewmodel
+            viewModel.signUp(user.email.toString(), user.password.toString())
 
         }
     }
+
+
+
 
 }
