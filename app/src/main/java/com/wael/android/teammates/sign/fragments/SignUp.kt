@@ -34,13 +34,13 @@ lateinit var binding:FragmentSignUpBinding
         // Inflate the layout for this fragment
         viewModel = ViewModelProvider(this).get(SignUpViewModel::class.java)
         binding=DataBindingUtil.inflate(inflater,R.layout.fragment_sign_up,container,false)
+        user= User()
         // da ele ha7ot feh el value ele gaya mn el layout
-
+        binding.user=user
         //da el user ele fl fragment layout
         //binding.user=user
 
-        user.email=binding.user.email
-        user.password=binding.user.password
+
         //   viewModel=ViewModelProvider(this).get(SignUpViewModel::class.java)
 
       //
@@ -59,11 +59,14 @@ lateinit var binding:FragmentSignUpBinding
             viewModel.signUpResult.observe(viewLifecycleOwner, Observer {
                 if (it == null) {
                     Log.i("check yasta", "tam ya 3am")
+                    viewModel.verify(user.email.toString())
+
                     button_register.setOnClickListener { findNavController().navigate(R.id.action_signUp_to_home2) }
                     viewModel.AddUser(user)
                 } else {
                     button_register.setOnClickListener { findNavController().navigate(R.id.action_signUp_to_home2) }
                     Log.i("check yasta", "3awed mara okhra")
+                    viewModel.verify(user.email.toString())
 
                 }
             })
@@ -82,9 +85,12 @@ lateinit var binding:FragmentSignUpBinding
             //check 3al views of fragment fun 1
             // law el views kamla
                 // signup from viewmodel
-            viewModel.signUp(user.email.toString(), user.password.toString())
+            viewModel.signUp(binding?.user?.email.toString(), binding?.user?.password.toString())
+
 
         }
+
+//        button2.setOnClickListener { viewModel.verify() }
     }
 
 

@@ -18,4 +18,6 @@
     <string name="phone_number">Phone Number</string>
     <string name="email">Email Address</string>
     <string name="password">Password</string>
+    <string name="home_string">Welcome To Team Mates</string>
+    <string name="teams_layout_header">Teams In The Room</string>
 </resources>
