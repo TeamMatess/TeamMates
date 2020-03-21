@@ -32,6 +32,7 @@ class Login : Fragment() {
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
 
+        loginBinding.signupText.setOnClickListener {findNavController().navigate(R.id.action_login_fragment_to_signUp)  }
 
         return loginBinding.root
     }

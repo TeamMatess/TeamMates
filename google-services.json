@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "7126840064",
+    "firebase_url": "https://team-mates-8013f.firebaseio.com",
+    "project_id": "team-mates-8013f",
+    "storage_bucket": "team-mates-8013f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:7126840064:android:6880d25bd443d5070ff9e5",
+        "android_client_info": {
+          "package_name": "com.wael.android.teammates"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "7126840064-u9ui2og5b1e68t4t2ncu110j51nire7o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByGKxxPpz-6d-dlFdiJ_nNRwqpXYLdEz8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "7126840064-u9ui2og5b1e68t4t2ncu110j51nire7o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
