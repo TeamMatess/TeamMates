@@ -1,39 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/navigation"
-    app:startDestination="@id/login_fragment"
-    >
+    app:startDestination="@id/login_fragment">
 
     <fragment
         android:id="@+id/login_fragment"
         android:name="com.wael.android.teammates.sign.fragments.Login"
         android:label="Login"
-        tools:layout="@layout/fragment_login"
-        >
+        tools:layout="@layout/fragment_login">
 
         <action
             android:id="@+id/action_login_fragment_to_signUp"
             app:destination="@id/signUp" />
         <action
-            android:id="@+id/action_login_fragment_to_home2"
-            app:destination="@id/home2" />
+            android:id="@+id/action_login_fragment_to_navigation2"
+            app:destination="@id/navigation2" />
     </fragment>
     <fragment
         android:id="@+id/signUp"
         android:name="com.wael.android.teammates.sign.fragments.SignUp"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" >
+        tools:layout="@layout/fragment_sign_up">
         <action
-            android:id="@+id/action_signUp_to_home2"
-            app:destination="@id/home2" />
+            android:id="@+id/action_signUp_to_navigation2"
+            app:destination="@id/navigation2" />
     </fragment>
     <activity
         android:id="@+id/home2"
         android:name="com.wael.android.teammates.home.Home"
         android:label="activity_home"
+
         tools:layout="@layout/activity_home" />
+    <include app:graph="@navigation/navigation2" />
+
+
 </navigation>

@@ -6,9 +6,11 @@ import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.navigation.Navigation.findNavController
 import com.google.android.gms.tasks.OnCompleteListener
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import com.wael.android.teammates.R
 
 
 class LoginViewModel : ViewModel() {
@@ -26,6 +28,7 @@ class LoginViewModel : ViewModel() {
 
             } else {
                 _loginResult.value=task.exception
+
             }
         }
 

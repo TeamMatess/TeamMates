@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@layout/fragment_first_home"
+    android:id="@+id/navigation2">
+    <fragment
+        android:name="com.wael.android.teammates.home.fragments.FirstHome"
+        android:id="@+id/firstHome"
+        tools:layout="@layout/fragment_first_home"
+        android:label="Home">
+        <action
+            android:id="@+id/action_firstHome_to_fragmentCreateRoom"
+            app:destination="@id/fragmentCreateRoom" />
+        <action
+            android:id="@+id/action_firstHome_to_roomDetailsFragment"
+            app:destination="@id/roomDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentCreateRoom"
+        android:label="Create Room"
+        android:name="com.wael.android.teammates.home.fragments.CreateRoom"
+        tools:layout="@layout/fragment_create_room"
+        >
+
+    </fragment>
+    <fragment
+        android:id="@+id/roomDetailsFragment"
+        tools:layout="@layout/fragment_room_details"
+        android:label="Room Details"
+        android:name="com.wael.android.teammates.home.fragments.RoomDetails"
+        >
+
+    </fragment>
+
+
+</navigation>

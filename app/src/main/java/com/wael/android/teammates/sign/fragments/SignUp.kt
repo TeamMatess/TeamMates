@@ -61,10 +61,10 @@ lateinit var binding:FragmentSignUpBinding
                     Log.i("check yasta", "tam ya 3am")
                     viewModel.verify(user.email.toString())
 
-                    button_register.setOnClickListener { findNavController().navigate(R.id.action_signUp_to_home2) }
+                    button_register.setOnClickListener { findNavController().navigate(R.id.action_signUp_to_navigation2) }
                     viewModel.AddUser(user)
                 } else {
-                    button_register.setOnClickListener { findNavController().navigate(R.id.action_signUp_to_home2) }
+                    button_register.setOnClickListener { findNavController().navigate(R.id.action_signUp_to_navigation2) }
                     Log.i("check yasta", "3awed mara okhra")
                     viewModel.verify(user.email.toString())
 

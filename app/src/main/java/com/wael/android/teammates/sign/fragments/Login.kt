@@ -47,7 +47,7 @@ class Login : Fragment() {
             Observer {
                 if (it == null) {
                     Log.i("login Check", "wsaal wsaal ")
-                    findNavController().navigate(R.id.action_login_fragment_to_home2)
+                    findNavController().navigate(R.id.action_login_fragment_to_navigation2)
                 } else {
                     Log.i("login Check", it.message.toString())
                 }
