@@ -18,6 +18,9 @@
         <action
             android:id="@+id/action_login_fragment_to_navigation2"
             app:destination="@id/navigation2" />
+        <action
+            android:id="@+id/action_login_fragment_to_nav3"
+            app:destination="@id/nav3" />
     </fragment>
     <fragment
         android:id="@+id/signUp"
@@ -27,14 +30,41 @@
         <action
             android:id="@+id/action_signUp_to_navigation2"
             app:destination="@id/navigation2" />
+        <action
+            android:id="@+id/action_signUp_to_nav3"
+            app:destination="@id/nav3" />
     </fragment>
-    <activity
-        android:id="@+id/home2"
-        android:name="com.wael.android.teammates.home.Home"
-        android:label="activity_home"
 
-        tools:layout="@layout/activity_home" />
-    <include app:graph="@navigation/navigation2" />
+    <navigation
+        android:id="@+id/nav3"
+        app:startDestination="@id/home"
+
+        >
+        <fragment
+            android:id="@+id/home"
+            android:name="com.wael.android.teammates.home.fragments.FirstHome"
+            tools:layout="@layout/fragment_first_home"
+
+           >
+            <action
+                android:id="@+id/action_home_to_create_room"
+                app:destination="@id/create_room" />
+            <action
+                android:id="@+id/action_home_to_details"
+                app:destination="@id/details" />
+        </fragment>
+        <fragment
+            android:id="@+id/create_room"
+            tools:layout="@layout/fragment_create_room"
+            android:name="com.wael.android.teammates.home.fragments.CreateRoom"
+            />
+        <fragment
+            android:id="@+id/details"
+            tools:layout="@layout/fragment_room_details"
+            android:name="com.wael.android.teammates.home.fragments.RoomDetails"
+            />
+
+    </navigation>
 
 
 </navigation>

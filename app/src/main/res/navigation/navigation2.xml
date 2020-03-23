@@ -3,13 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    app:startDestination="@layout/fragment_first_home"
-    android:id="@+id/navigation2">
+    android:id="@+id/navigation2"
+    app:startDestination="@layout/fragment_first_home">
     <fragment
-        android:name="com.wael.android.teammates.home.fragments.FirstHome"
         android:id="@+id/firstHome"
-        tools:layout="@layout/fragment_first_home"
-        android:label="Home">
+        android:name="com.wael.android.teammates.home.fragments.FirstHome"
+        android:label="Home"
+        tools:layout="@layout/fragment_first_home">
         <action
             android:id="@+id/action_firstHome_to_fragmentCreateRoom"
             app:destination="@id/fragmentCreateRoom" />
@@ -20,18 +20,16 @@
 
     <fragment
         android:id="@+id/fragmentCreateRoom"
-        android:label="Create Room"
         android:name="com.wael.android.teammates.home.fragments.CreateRoom"
-        tools:layout="@layout/fragment_create_room"
-        >
+        android:label="Create Room"
+        tools:layout="@layout/fragment_create_room">
 
     </fragment>
     <fragment
         android:id="@+id/roomDetailsFragment"
-        tools:layout="@layout/fragment_room_details"
-        android:label="Room Details"
         android:name="com.wael.android.teammates.home.fragments.RoomDetails"
-        >
+        android:label="Room Details"
+        tools:layout="@layout/fragment_room_details">
 
     </fragment>
 

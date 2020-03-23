@@ -16,8 +16,6 @@ import androidx.navigation.fragment.findNavController
 
 import com.wael.android.teammates.R
 import com.wael.android.teammates.databinding.FragmentFirstHomeBinding
-import com.wael.android.teammates.home.Home
-import kotlinx.android.synthetic.main.fragment_room_details.view.*
 
 /**
  * A simple [Fragment] subclass.
@@ -33,7 +31,7 @@ class FirstHome : Fragment() {
         NavHostFragment.findNavController(this)
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_first_home, container, false)
-        val navHostFragment = childFragmentManager.findFragmentById(R.id.fragment2) as NavHostFragment
+       // val navHostFragment = childFragmentManager.findFragmentById(R.id.fragment2) as NavHostFragment
         binding.enterRoomButton.setOnClickListener {
             binding.roomCode.visibility = View.VISIBLE
             binding.enterRoomButton.visibility = View.INVISIBLE
@@ -44,14 +42,13 @@ class FirstHome : Fragment() {
             finalPoint = Point(diffPointsX, diffpointsY)
 
             binding.createRoomButton.setText("Enter")
-           // binding.createRoomButton.setOnClickListener { navHostFragment.navController.navigate(R.id.action_firstHome_to_roomDetailsFragment) }
+            binding.createRoomButton.setOnClickListener { findNavController().navigate(R.id.action_home_to_create_room) }
             translater(finalPoint)
 
 
         }
         binding.createRoomButton.setOnClickListener {
-
-           // navHostFragment.navController.navigate(R.id.action_firstHome_to_fragmentCreateRoom)
+            findNavController().navigate(R.id.action_home_to_create_room)
             /* binding.roomCode.visibility = View.INVISIBLE
              binding.enterRoomButton.visibility = View.VISIBLE
              val pointOfCreate: Point = getPointOfView(binding.createRoomButton)

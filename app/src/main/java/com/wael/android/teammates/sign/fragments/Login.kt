@@ -32,7 +32,7 @@ class Login : Fragment() {
         viewModel = ViewModelProvider(this).get(LoginViewModel::class.java)
 
 
-        loginBinding.signupText.setOnClickListener {findNavController().navigate(R.id.action_login_fragment_to_signUp)  }
+        loginBinding.signupText.setOnClickListener {findNavController().navigate(R.id.action_login_fragment_to_nav3)  }
 
         return loginBinding.root
     }
@@ -47,9 +47,10 @@ class Login : Fragment() {
             Observer {
                 if (it == null) {
                     Log.i("login Check", "wsaal wsaal ")
-                    findNavController().navigate(R.id.action_login_fragment_to_navigation2)
+                    findNavController().navigate(R.id.action_login_fragment_to_nav3)
                 } else {
                     Log.i("login Check", it.message.toString())
+                    findNavController().navigate(R.id.action_login_fragment_to_nav3)
                 }
             })
         button_sign_in.setOnClickListener {
