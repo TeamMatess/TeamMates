@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android"><itemandroid:drawable="@drawable/shadow_left"/><item>-->
@@ -12,3 +13,9 @@
     <solid android:color="#fff" />
 
 </shape>
+
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+</selector>
+
