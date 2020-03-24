@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android"><itemandroid:drawable="@drawable/shadow_left"/><item>-->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!--</item> </layer-list> -->
+
+    <corners
+        android:bottomRightRadius="40dp"
+        android:topRightRadius="40dp" />
+
+    <gradient
+        android:angle="225"
+        android:centerColor="@color/black"
+        android:endColor="@color/black"
+        android:startColor="@color/black" />
+
+</shape>

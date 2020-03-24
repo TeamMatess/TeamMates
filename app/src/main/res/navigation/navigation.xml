@@ -1,39 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
     android:id="@+id/navigation"
-    app:startDestination="@id/login_fragment"
-    >
+    app:startDestination="@id/login_fragment">
 
     <fragment
         android:id="@+id/login_fragment"
         android:name="com.wael.android.teammates.sign.fragments.Login"
         android:label="Login"
-        tools:layout="@layout/fragment_login"
-        >
+        tools:layout="@layout/fragment_login">
 
         <action
             android:id="@+id/action_login_fragment_to_signUp"
             app:destination="@id/signUp" />
+
         <action
-            android:id="@+id/action_login_fragment_to_home2"
-            app:destination="@id/home2" />
+            android:id="@+id/action_login_fragment_to_nav3"
+            app:destination="@id/nav3" />
     </fragment>
     <fragment
         android:id="@+id/signUp"
         android:name="com.wael.android.teammates.sign.fragments.SignUp"
         android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" >
+        tools:layout="@layout/fragment_sign_up">
+
         <action
-            android:id="@+id/action_signUp_to_home2"
-            app:destination="@id/home2" />
+            android:id="@+id/action_signUp_to_nav3"
+            app:destination="@id/nav3" />
     </fragment>
-    <activity
-        android:id="@+id/home2"
-        android:name="com.wael.android.teammates.home.Home"
-        android:label="activity_home"
-        tools:layout="@layout/activity_home" />
+
+    <navigation
+        android:id="@+id/nav3"
+        app:startDestination="@id/home"
+
+        >
+        <fragment
+            android:id="@+id/home"
+            android:name="com.wael.android.teammates.home.fragments.FirstHome"
+            tools:layout="@layout/fragment_first_home"
+
+           >
+            <action
+                android:id="@+id/action_home_to_create_room"
+                app:destination="@id/create_room" />
+            <action
+                android:id="@+id/action_home_to_details"
+                app:destination="@id/details" />
+        </fragment>
+        <fragment
+            android:id="@+id/create_room"
+            tools:layout="@layout/fragment_add_room"
+            android:name="com.wael.android.teammates.home.fragments.AddRoom"
+            >
+            <action
+                android:id="@+id/action_create_room_to_details"
+                app:destination="@id/details" />
+        </fragment>
+        <fragment
+            android:id="@+id/details"
+            tools:layout="@layout/fragment_room_details"
+            android:name="com.wael.android.teammates.home.fragments.RoomDetails">
+        <action
+            android:id="@+id/action_Details_to_teams"
+            app:destination="@id/teams" />
+        </fragment>
+<fragment
+    android:id="@+id/teams"
+    tools:layout="@layout/fragment_teams"
+    android:name="com.wael.android.teammates.home.fragments.TeamsFragment"
+    android:label="Teams"
+    >
+    <action
+        android:id="@+id/action_teams_to_addTeams"
+        app:destination="@id/addTeams" />
+</fragment>
+        <fragment
+            android:id="@+id/addTeams"
+            android:name="com.wael.android.teammates.home.fragments.AddTeams"
+            android:label="Add Team"
+            tools:layout="@layout/fragment_add_teams"
+
+            >
+            <action
+                android:id="@+id/action_addTeams_to_teams"
+                app:destination="@id/teams" />
+        </fragment>
+    </navigation>
+
+
 </navigation>

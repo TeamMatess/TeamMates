@@ -48,8 +48,9 @@ dependencies {
 
     kapt "com.android.databinding:compiler:3.5.3"
     //navigation
-    implementation "androidx.navigation:navigation-fragment-ktx:2.3.0-alpha03"
-    implementation "androidx.navigation:navigation-ui-ktx:2.3.0-alpha03"
+
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.0-alpha04"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.0-alpha04"
 
     //auth
     implementation 'com.google.firebase:firebase-auth:19.3.0'

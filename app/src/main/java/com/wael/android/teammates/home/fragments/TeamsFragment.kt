@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 
 import com.wael.android.teammates.R
 import com.wael.android.teammates.databinding.FragmentTeamsBinding
@@ -35,6 +36,7 @@ lateinit var binding:FragmentTeamsBinding
         val teamsAdapter=TeamsAdapter()
         teamsAdapter.submitList(teams)
         binding.typesList.adapter=teamsAdapter
+        binding.fab.setOnClickListener { findNavController().navigate(R.id.action_teams_to_addTeams) }
         return binding.root
 
     }
