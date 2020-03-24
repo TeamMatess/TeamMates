@@ -15,9 +15,7 @@
         <action
             android:id="@+id/action_login_fragment_to_signUp"
             app:destination="@id/signUp" />
-        <action
-            android:id="@+id/action_login_fragment_to_navigation2"
-            app:destination="@id/navigation2" />
+
         <action
             android:id="@+id/action_login_fragment_to_nav3"
             app:destination="@id/nav3" />
@@ -27,9 +25,7 @@
         android:name="com.wael.android.teammates.sign.fragments.SignUp"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up">
-        <action
-            android:id="@+id/action_signUp_to_navigation2"
-            app:destination="@id/navigation2" />
+
         <action
             android:id="@+id/action_signUp_to_nav3"
             app:destination="@id/nav3" />
@@ -55,15 +51,42 @@
         </fragment>
         <fragment
             android:id="@+id/create_room"
-            tools:layout="@layout/fragment_create_room"
-            android:name="com.wael.android.teammates.home.fragments.CreateRoom"
-            />
+            tools:layout="@layout/fragment_add_room"
+            android:name="com.wael.android.teammates.home.fragments.AddRoom"
+            >
+            <action
+                android:id="@+id/action_create_room_to_details"
+                app:destination="@id/details" />
+        </fragment>
         <fragment
             android:id="@+id/details"
             tools:layout="@layout/fragment_room_details"
-            android:name="com.wael.android.teammates.home.fragments.RoomDetails"
-            />
+            android:name="com.wael.android.teammates.home.fragments.RoomDetails">
+        <action
+            android:id="@+id/action_Details_to_teams"
+            app:destination="@id/teams" />
+        </fragment>
+<fragment
+    android:id="@+id/teams"
+    tools:layout="@layout/fragment_teams"
+    android:name="com.wael.android.teammates.home.fragments.TeamsFragment"
+    android:label="Teams"
+    >
+    <action
+        android:id="@+id/action_teams_to_addTeams"
+        app:destination="@id/addTeams" />
+</fragment>
+        <fragment
+            android:id="@+id/addTeams"
+            android:name="com.wael.android.teammates.home.fragments.AddTeams"
+            android:label="Add Team"
+            tools:layout="@layout/fragment_add_teams"
 
+            >
+            <action
+                android:id="@+id/action_addTeams_to_teams"
+                app:destination="@id/teams" />
+        </fragment>
     </navigation>
 
 

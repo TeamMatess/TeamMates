@@ -20,4 +20,8 @@
     <string name="password">Password</string>
     <string name="home_string">Welcome To Team Mates</string>
     <string name="teams_layout_header">Teams In The Room</string>
+    <string name="room_name">Room Name</string>
+    <string name="project_name">Project Name</string>
+    <string name="project_place">Project Place</string>
+    <string name="deadline">Deadline</string>
 </resources>

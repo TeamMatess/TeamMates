@@ -28,7 +28,7 @@ class FirstHome : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        NavHostFragment.findNavController(this)
+
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_first_home, container, false)
        // val navHostFragment = childFragmentManager.findFragmentById(R.id.fragment2) as NavHostFragment
@@ -49,15 +49,7 @@ class FirstHome : Fragment() {
         }
         binding.createRoomButton.setOnClickListener {
             findNavController().navigate(R.id.action_home_to_create_room)
-            /* binding.roomCode.visibility = View.INVISIBLE
-             binding.enterRoomButton.visibility = View.VISIBLE
-             val pointOfCreate: Point = getPointOfView(binding.createRoomButton)
-             val pointOfLine: Point = getPointOfView(binding.guideline)
-             val diffPointsX = pointOfLine.x - pointOfCreate.x
-             val diffpointsY = pointOfLine.y - pointOfCreate.y
-             finalPoint = Point(diffPointsX, diffpointsY)
 
-             translater(finalPoint)*/
         }
 
         return binding.root
